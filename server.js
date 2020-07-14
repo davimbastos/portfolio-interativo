@@ -34,14 +34,14 @@ server.get('/',function(req, res){
     }
 
 
-    return res.render("about", { about })
+    return res.render("profile", { about })
 })
 
-server.get('/front',function(req, res){
-    return res.render("front", { items: videos })
+server.get('/projects',function(req, res){
+    return res.render("projects", { items: videos })
 })
 
-server.get('/video', function(req, res) {
+server.get('/devs', function(req, res) {
     const id = req.query.id
 
     const video = videos.find(function(video){
@@ -53,7 +53,7 @@ server.get('/video', function(req, res) {
         return res.send("Video not found!")
     }
 
-    return res.render("video", { item: video })
+    return res.render("devs", { item: video })
     
 })
 

@@ -1,0 +1,46 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+{% block head %}
+
+    <title>{{item.title}}</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+
+{% endblock %}
+
+        <div id="wrapper">
+            <h1>{{item.title}}</h1>
+        </div>
+
+       <div class="container">
+           <div class="video">
+
+                <div class="card" id="{{ item.id }}">
+                
+                    <div class="card_video-container">
+                        {# <a class="close-video" href="/projects">
+                            <i class="material-icons md-36">arrow_back_ios</i>
+                        </a>  #}
+                        <iframe src="https://www.youtube.com/embed/{{item.id}}" frameborder="0"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="devs">
+                <h2>Repositórios</h2>
+                <div>
+                    <a href="https://github.com/davimbastos/portfolio-interativo" target="_blank">Davi Bastos</a>
+                </div>
+            </div>
+        </div>
+           
+       </div>
+        
+
+        <script src="/scripts.js"></script>
+
+{% endblock %}
+

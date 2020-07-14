@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap');
+
+:root {
+    --color-realce:#FC5123;
+    --color-bg:#4c4c4c;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    background:#323232;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+}
+
+header {
+    padding: 32px;
+    border-bottom: 1px solid #333 ;
+    background: rgba(0,0,0, 0.1);
+}
+
+
+
