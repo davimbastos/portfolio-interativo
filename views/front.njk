@@ -1,0 +1,70 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+{% block head %}
+
+    <title>Projetos FrontEnd</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    
+{% endblock %}
+
+        <div id="wrapper">
+            <h1>UI Clones</h1>
+        </div>
+
+       
+
+        <section class="cards">
+
+            {% for item in items %}
+            <div class="card" >
+                
+                <div class="card_select" id="{{ item.id }}">
+
+                    <div class="card_image-container {{ 'featured-wrapper ' if item.featured }}">
+                        <img src="https://img.youtube.com/vi/{{ item.id }}/maxresdefault.jpg" alt="Imagem de {{item.title}}">
+                        {# {% if item.featured %}
+                            <div class="featured">Pendente</div>
+                        {% endif %} #}
+                    </div>
+                    <div class="card_content">
+                        <p>{{item.title}}</p>
+                    </div>
+                </div>
+                <div class="card_info">
+                    <p class="card_tech">{{item.tech}}</p>
+                    {# <p class="card_site">{{item.site}}</p> #}
+                    <p class="card_likes">1</p>
+                    <button type="button" class="card_button">
+                        <i class="material-icons">thumb_up</i>
+                    </button>
+                </div>
+            
+            </div>
+            {% endfor %}
+
+        </section>
+
+           
+
+       
+
+        {# <div class="modal-overlay">
+            <div class="modal">
+                <a class="close-modal">
+                    <i class="material-icons">close</i>
+                </a>
+
+                <div class="modal-content">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div> #}
+
+        <script src="/scripts.js"></script>
+
+{% endblock %}
+
